@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>nth-child</title>
+<style>
+div {
+	border: 1px solid black;
+	box-sizing: border-box;
+}
+
+.main {
+	margin: 0 auto;
+	background: hsla(120, 100%, 50%, 1);
+	width: 452px;
+	height: 500px;
+	overflow: hidden;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background: hsla(0, 0%, 50%, 1);
+	width: 500px;
+	margin: 0 -25px;
+}
+
+.container div {
+	width: 200px;
+	height: 200px;
+	background: hsla(230, 100%, 50%, 1);
+	background-clip: content-box;
+	margin: 24px;
+	padding: 10px 100px 100px 10px;
+}
+
+.container :nth-child(n+2):nth-child(-n+3)  {
+	background: hsla(360, 100%, 50%, 1);
+	background-clip: content-box;
+}
+
+</style>
+</head>
+<body>
+	<div class="main">
+		<div class="container">
+			<div>
+			a
+			</div>
+			<div>
+			b
+			</div>
+			<div>
+			c
+			</div>		
+			<div>
+			d
+			</div>		
+		</div>
+	</div>
+</body>
+</html>
